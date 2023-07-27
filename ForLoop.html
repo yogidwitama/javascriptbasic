@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+
+<body>
+    <h1> For Loop</h1>
+    <ul>
+        <li>
+            For adalah salah satu kata kunci yang bisa digunakan untuk melakukan perulangan
+        </li>
+        <li>
+            Blok code yang terdapat dalam for akan selalu diulangi selama kondisi for terpenuhi
+        </li>
+    </ul>
+    <br>
+    <h3>Sintak For Loop</h3>
+    <p>for(init statement; kondisi; post statement){
+        //block perulangan}</p>
+    <ul>
+        <li>
+            Init statement akan dieksekusi hanya sekali dari awal sebelum perulangan
+        </li>
+        <li>
+            Kondisi akan dilakukan pengecekan dalam setiap perulangan, jika true perulangan akan dilakukan, jika false
+            perulangan akan berhenti
+        </li>
+        <li>
+            Post statement akan dieksekusi setiap kali diakhir perulangan
+        </li>
+        <li>
+            Init statement, Kondisi dan Post Statement tidak wajib diisi, jika kondisi tidak diisi, berarti kondisi
+            selalu bernilai true
+        </li>
+    </ul>
+    <script>
+        // infinite loop dengan tidak memberikan 3 statement
+        // for (; ;) {
+        //     alert("infinite loop nub 🤡")
+        // }
+
+
+        for (let counter = 0; counter <= 10;) {
+            document.writeln(`<p>Perulangan ke ${counter}</p>`);
+            counter++;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ternary Operator</title>
+    </head>
+    <body>
+        <p>
+            <ul>
+                <li>
+                    Operator sederhana dari if statement
+                </li>
+                <li>
+                    terdiri dari kondisi yang dievaluasi, jika menghasilkan true
+                    maka nilai pertama diambil, jika false maka nilai kedua
+                    diambil
+                </li>
+            </ul>
+        </p>
+
+        <script>
+            // if statement biasa
+            const nilai = 85;
+            let ucapan;
+
+            if(nilai >=60){
+                ucapan="selamat anda lulus";
+
+            }else{
+                ucapan ="silahkan coba lagi"
+            }
+
+            document.writeln(`<p>${ucapan}</p>`)
+
+            // ternary operator
+            ucapan=nilai >= 85 ? "Selamat anda lulus" :"🙉";
+            document.writeln(`<p>${ucapan}</p>`)
+
+
+        </script>
+    </body>
+</html>

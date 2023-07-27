@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falsy and Truthy</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            Falsy atau Falsey, merupakan value yang ketika dalam konteks
+            boolean, dia dianggap false
+        </li>
+        <li>
+            Salah satu fitur unik JavaScript kondisi tidak hanya berisi
+            boolean, diluar boolean pun bisa
+        </li>
+        <li>
+            Jadi harus tahu peraturannya
+        </li>
+    </ul>
+    <h1>Data Falsy</h1>
+    <table>
+        <thead>
+            <tr>
+                <th> Falsy</th>
+                <th>Keterangan</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    false
+                </td>
+                <td>
+                    boolean false
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    0, -0
+                </td>
+                <td>
+                    Number 0 dan -0 dianggap false
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    "", '', ``
+                </td>
+                <td>
+                    Semua string kosong false
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    null
+                </td>
+                <td>
+                    false
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    undefined
+                </td>
+                <td>
+                    false
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Nan
+                </td>
+                <td>
+                    false
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <script>
+        const data = [90, 90];
+        if (data) {
+            document.writeln("True")
+        } else {
+            document.writeln("False")
+        }
+    </script>
+</body>
+
+</html>

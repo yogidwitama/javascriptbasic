@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika Non boolean</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            Diketahui operator logika AND(&&) dan OR (||) digunakan untuk dua data boolean
+        </li>
+        <li>
+            Namun di JavaScript bisa menggunakan logika AND dan OR untuk tipe data non boolean
+        </li>
+
+    </ul>
+    <h1>Operator OR (||) di Non Bollean</h1>
+    <ul>
+        <li>
+            Operator logika OR(||) membaca dari kiri kekanan
+        </li>
+        <li>
+            Operator akan mengambil nilai pertama yang truthy
+        </li>
+        <li>
+            jika tidak ada satupun yang truthy maka yang terakhir akan diambil
+        </li>
+    </ul>
+    <script>
+        console.info("hello" || ""); // hello
+        console.info("" || []); //true
+        console.info("0" || "Nol"); //0
+        console.info(0 || "Nol"); //Nol
+        console.info(null || "NULL"); //Null
+        console.info(undefined || "undifined"); //undifined
+
+        // example usage
+        const person = {
+            firstName: null,
+            lastName: "Dwtm"
+        };
+
+        const name = person.firstName || person.lastName;
+        console.info(name);
+
+
+    </script>
+    <h1>Operator AND (&&) di Non Bollean</h1>
+    <ul>
+        <li>
+            Operator logika AND(&&) membaca dari kiri kekanan
+        </li>
+        <li>
+            Operator akan mengambil nilai pertama yang Falsy
+        </li>
+        <li>
+            jika tidak ada satupun yang falsy maka yang terakhir akan diambil
+        </li>
+    </ul>
+    <script>
+        console.info("hello" && "");// ""
+        console.info("" && []);
+        console.info("0" && "NOL"); //NOL
+    </script>
+</body>
+
+</html>

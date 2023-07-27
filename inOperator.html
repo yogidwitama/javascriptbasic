@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>In Oprator</title>
+        <ul>
+            <li>mengetahui/ mengecek object ada atau tidak</li>
+        </ul>
+    </head>
+    <body>
+        <script>
+            // basic in operator
+        const person={
+        firstName:"Yogi",
+            lastName:"Dwtms"
+        };
+
+        if("firstName" in person){
+            alert(`Hello${person.firstName}`);
+        }else{
+            alert("Hello 🤡")
+        }
+
+
+        // indifined in in-opertor
+        const student ={
+            firstName:"Yogi",
+            middleName:undefined,
+            lastName:"DWTM"
+        }
+        if("middleName" in student){
+            alert(`Hello ${student.middleName} `)
+        }else(
+            alert("Hello 🤡")
+        )
+
+        // null in in-inperator
+        const names =[null, "Yogi", null];
+        const result = 0 in names;
+        alert(`<p>${result}</p>`)
+    </script>
+    </body>
+</html>
