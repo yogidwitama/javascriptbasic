@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+
+<body>
+    <h1>With Statement</h1>
+    <ul>
+        <li>
+            With statement merupakan fitur yang digunakan untuk menurunkan sebuah scope data
+        </li>
+        <li>
+            Dengan menggunakan with statement, kita mengakses properti dalam sebuah data tanpa harus menyebut datanya
+        </li>
+    </ul>
+    <h1>Code tanpa With Statemetn</h1>
+    <p>console</p>
+    <script>
+        const person = {
+            firstName: "Yogi",
+            middleName: "Dwitama",
+            lastName: "Uchiha"
+        }
+        console.log(person.firstName);
+        console.log(person.middleName);
+        console.log(person.lastName);
+    </script>
+    <h1>Dengan with statement</h1>
+    <script>
+        const persons = {
+            firstName: "Yogi",
+            middleName: "Dwitama",
+            lastName: "Uchiha"
+        };
+        with (persons) {
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+        }
+    </script>
+    <h1 class="color-background: red">Tidak boleh digunakan lagi</h1>
+    why ?
+    <ul>
+        <li>
+            karena kadang membuat code menjadi ambigu
+        </li>
+    </ul>
+</body>
+
+</html>

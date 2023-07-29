@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label</title>
+</head>
+
+<body>
+    <h1>Break</h1>
+
+    <ul>
+        <li>
+            Merupakan salah satu kunci break dan continue
+        </li>
+        <li>
+            Secara default saat melakukan break atau continue, akan melakukan terhadap perulangan dimana code break dan
+            continue itu digunakan
+        </li>
+        <li>
+            Dengan label, kita bisa melakukan break dan continue terhadap perulangan yang kita inginkan asalkan pada
+            perulangan kita gunakan label
+        </li>
+        <li>
+            Untuk membuat label, kita bisa menggunakan nama label lalu diikuti dengan :(titik dua)
+        </li>
+    </ul>
+    <script>
+        loopi:
+        for (let i = 0; i <= 10; i++) {
+            loopj:
+            for (let j = 0; j < 10; j++) {
+                document.writeln(`${i}-${j}`);
+            }
+        }
+    </script>
+    <br>
+    <h1>Label Continue</h1>
+    <script>
+        loopi:
+        for (let i = 0; i < 10; i++) {
+            loopj:
+            for (let j = 0; j < 20; j++) {
+                if (j > 10) {
+                    continue loopi;
+                }
+                document.writeln(`<p>${i}-${j}</p>`)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

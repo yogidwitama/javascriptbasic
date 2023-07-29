@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Break Countinue</title>
+    <title>Break Continue</title>
 </head>
 
 <body>
@@ -21,6 +21,27 @@
             perulangan selanjutnya
         </li>
     </ul>
+    <h1>Break</h1>
+    <script>
+        let counter = 1;
+        while (true) {
+            document.writeln(`<p>Perulangan Ke ${counter}</p>`);
+            counter++;
+            if (counter > 10) {
+                break
+            }
+        }
+    </script>
+    <br>
+    <h1>Continue</h1>
+    <script>
+        for (let i = 0; i <= 100; i++) {
+            if (i % 2 === 0) {
+                continue
+            }
+            document.writeln(`<p>Perulangan Ganjil ${i}</p>`);
+        }
+    </script>
 </body>
 
 </html>
