@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+
+<body>
+    <h1>
+        Default Parameter
+    </h1>
+    <ul>
+        <li>
+            Parameter opiotnal tidak bisa memberi value terhadap parameter
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Parameter juga bida diberi default value, artinya jikatidak mengirim data ke parameter atau mengirim data
+            undifined, secara otomatis parameter akan diisi oleh default value
+        </li>
+    </ul>
+    <script>
+        const register = (name, gender = "UNKNOWN") => {
+            console.log(name);
+            console.log(gender);
+        }
+        register("YOGI");
+        register("YOGI", "MALE");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+
+<body>
+    <h1>Rest Parameter</h1>
+    <ul>
+        <li>
+            Rest Parameter adalah fitur dimana bisa mengirim data sebanyak-banyaknya pada satu parameter, dan secara
+            otomatis akan dikonversi menjadi Array
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Rest parameter hanya boleh ada satu difunction
+        </li>
+
+    </ul>
+    <ul>
+        <li>
+            Rest parameter hanya boleh diposisi paling akhir
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Dibahas pemegroman lain disebut variable argument
+        </li>
+    </ul>
+
+    <script>
+        const Summing = (name, ...data) => {
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`)
+        }
+        Summing("Orange", 1, 2, 34, 45)
+    </script>
+    <h1>Spred Array</h1>
+    <script>
+        const values = [10, 10, 10, 10]
+        Summing("SpreadSyntax", ...values)
+    </script>
+    <p>last here Rest Parameter</p>
+
+
+</body>
+
+</html>
