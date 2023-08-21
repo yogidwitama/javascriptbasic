@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function dalam Function atau Nested Function</title>
+</head>
+
+<body>
+    <h1>Function dalam Function atau Nested Function</h1>
+    <ul>
+        <li>
+            tidak ada batasan dimana kita bisa membuat function
+        </li>
+
+    </ul>
+    <ul>
+        <li>
+            Termasuk jika ingin membuat function didalam sebuah function, bisa dilakukan
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Function yang terdapat didalam, disebut inner Function
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Inner Function hanya bisa diakses ditempat kita membuat funtion, tidak bisa diakses diluar function
+        </li>
+    </ul>
+    <script>
+        function outer() {
+
+            function inner() {
+                document.writeln(`<p>Inner</p>`)
+            };
+            inner();
+            inner();
+
+        };
+
+        outer();
+        inner();//Error
+
+    </script>
+</body>
+
+</html>

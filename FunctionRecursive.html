@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Function</title>
+</head>
+
+<body>
+    <h1>
+        Recursive Function
+    </h1>
+    <ul>
+        <li>
+            Recusrive function adalah kemampuan function memanggil function dirinya sendiri
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Kadang memang ada banyak problem, yang lebih mudah diselesaikan menggunakan recursive function, seperti
+            kasus factorial
+        </li>
+    </ul>
+    <h3>Contoh kasus tanpa recursive function</h3>
+    <script>
+        function factorial(value) {
+            let result = 1;
+            for (let i = 1; i <= value; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        document.writeln(`<p>${factorial(5)}</p>`);
+        console.info(1 * 2 * 3 * 4 * 5)
+    </script>
+    <h3>
+        code dengan recursive function
+    </h3>
+    <script>
+        function factorialRecursive(value) {
+            if (value === 1) {
+                return 1;
+            } else {
+                return value * factorialRecursive(value - 1);
+            }
+        }
+        document.writeln(`<p>${factorialRecursive(5)}</p>`)
+    </script>
+    <h3>Real case</h3>
+    <script>
+        const employees = [
+            {
+                name: "Alice", salary: 5000, bonus: 1000, subordinates: [
+                    {
+                        name: "Bob", salary: 2000, bonus: 2000, subordinates: []
+                    },
+                    {
+                        name: "carol", salary: 4500, bonus: 200, subordinates: [
+                            {
+                                name: "David", salary: 3500, bonus: 100, subordinates: []
+                            }
+                        ]
+                    }
+                ]
+            }]
+
+        function calculateTotalIncome(employee) {
+            let totalIncome = employee.salary + employee.bonus;
+            if (employee.subordinates.length > 0) {
+                for (const subordinates of employee.subordinates) {
+                    totalIncome += calculateTotalIncome(subordinates);
+                }
+            }
+            return totalIncome;
+        }
+        const aliceTotalIncome = calculateTotalIncome(employees[0]);
+        document.writeln(`Alice total income: ${aliceTotalIncome}`)
+    </script>
+</body>
+
+</html>

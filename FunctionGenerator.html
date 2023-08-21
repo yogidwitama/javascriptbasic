@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+
+<body>
+    <h1>
+        Fucntion Generator
+    </h1>
+    <ul>
+        <li>
+            Fucntion Generator adalah function yang digunakan untuk membuat data genarator
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Generator adalah data yang bisa di interaksikan dengan Array
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Untuk membuat function generator, perlu menggunakan tanda * (bintang) setelah kata function
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Untuk mengembalikan data di tiap iterasi, bisa gunakan kata kunci yield diikuti datanya
+        </li>
+    </ul>
+    <script>
+        function* createName() {
+            yield "Yogi";
+            yield "Dwi";
+            yield "Tama";
+        }
+        //document.writeln(`<p>${createName()}</p>`)
+        //console.info(createName());
+        const names = createName();
+        for (const name of names) {
+            console.info(name)
+        }
+    </script>
+    <h1>
+        Function Generator Komleks
+    </h1>
+    <script>
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    yield i;
+                }
+            }
+        };
+        const angkaGanjil = buatGanjil(100);
+        for (const angka of angkaGanjil) {
+            console.info(angka)
+        };
+    </script>
+
+    <h1>Lazy Evaluation </h1>
+    <ul>
+        <li>
+            Generator itu sifatnya lazy
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Jadi artinya ketika data belum diambil dari generator, maka yield selanjutnya tidak akan dieksekusi
+        </li>
+    </ul>
+    <script>
+        function* buatGanjil(value) {
+            for (let i = 1; i <= value; i++) {
+                if (i % 2 === 1) {
+                    console.info(`Yield ${i}`)
+                    yield i;
+                }
+            }
+        };
+        const angkaGanjils = buatGanjil(100);
+        for (const angka of angkaGanjils) {
+            console.info(angka)
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+
+<body>
+    <h1>Anonymous Function</h1>
+    <ul>
+        <li>
+            sebelumnya selalu membuat function dengan nama
+        </li>
+    </ul>
+    <ul>
+        <li>
+            JavaScript bisa membuat function atau istilahnya adalah Anonymous Function
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Anonymous function dalam sebuah variable bisa dibuat ketika mengisi parameter
+        </li>
+    </ul>
+    <ul>
+        <li>
+            Tidak bisa di reuse functionnya(harus dipanggil atau dibuat lagi)
+        </li>
+    </ul>
+    <h2>Anonymous Function Parameter</h2>
+    <script>
+        let say = function (name) {
+            document.writeln(`<p>Hello ${name}</p>`);
+        };
+        say("Yogi");
+
+    </script>
+    <h2>Anonymous Function Variable</h2>
+    <script>
+        function giveMeName(callback) {
+            callback("Yogi")
+        };
+        giveMeName(function (name) {
+            document.writeln(`<p>Hello ${name}</p>`);
+        });
+    </script>
+
+</body>
+
+</html>
